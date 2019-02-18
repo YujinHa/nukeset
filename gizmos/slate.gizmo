@@ -1,0 +1,230 @@
+#! /Applications/Nuke11.1v4/Nuke11.1v4.app/Contents/MacOS/libnuke-11.1.4.dylib -nx
+version 11.1 v4
+Gizmo {
+ addUserKnob {20 User}
+ addUserKnob {1 topLeft}
+ topLeft "lazypic | circle"
+ addUserKnob {1 topCenter}
+ topCenter FOO_0010
+ addUserKnob {1 topRight}
+ topRight "\[date %Y]-\[date %m]-\[date %d] \[date %T]"
+ addUserKnob {26 "" +STARTLINE}
+ addUserKnob {1 bottomLeft}
+ bottomLeft "woong comp v001"
+ addUserKnob {1 bottomCenter}
+ bottomCenter memo
+ addUserKnob {1 bottomRight}
+ bottomRight "\[metadata input/timecode] \[format %06d \[frame]]"
+ addUserKnob {26 "" +STARTLINE}
+ addUserKnob {3 border}
+ border 10
+ addUserKnob {3 fontSize}
+ fontSize 25
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 43
+  ypos -236
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.topCenter]"
+  old_message {{70 79 79 95 48 48 49 48}
+    }
+  old_expression_markers {{0 7}
+    }
+  box {0 0 {width} {height-parent.border}}
+  xjustify center
+  transforms {{0 2}
+    }
+  cursor_position 23
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00001*parent.fontSize}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x {{width}}
+  background_border_y {{border}}
+  name top_center
+  xpos 43
+  ypos -128
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.topLeft]"
+  old_message {{108 97 122 121 112 105 99 32 124 32 99 105 114 99 108 101}
+    }
+  old_expression_markers {{0 15}
+    }
+  box {{border} 0 {width} {height-parent.border}}
+  transforms {{0 2}
+    }
+  cursor_position 22
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00001*parent.fontSize}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y {{parent.border}}
+  name top_left
+  xpos 43
+  ypos -104
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.topRight]"
+  old_message {{50 48 49 56 45 49 50 45 50 49 32 49 49 58 48 56 58 53 53}
+    }
+  old_expression_markers {{0 18}
+    }
+  box {0 0 {width-parent.border} {height-parent.border}}
+  xjustify right
+  transforms {{0 2}
+    }
+  cursor_position 23
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00001*parent.fontSize}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y {{parent.border}}
+  name top_right
+  xpos 43
+  ypos -76
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.bottomCenter]"
+  old_message {{109 101 109 111}
+    }
+  old_expression_markers {{0 3}
+    }
+  box {0 {border} {width x37 1920} {height x37 1080}}
+  xjustify center
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 27
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00001*parent.fontSize}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_x {{width}}
+  background_border_y {{border+7}}
+  name bottom_center
+  xpos 43
+  ypos -48
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.bottomLeft]"
+  old_message {{119 111 111 110 103 32 99 111 109 112 32 118 48 48 49}
+    }
+  old_expression_markers {{0 14}
+    }
+  box {{border} {border} {width} {height}}
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 25
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00001*parent.fontSize}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y {{parent.border}}
+  name bottom_left
+  xpos 43
+  ypos -20
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.bottomRight]"
+  old_message {{50 51 58 52 55 58 53 56 58 48 48 32 48 48 48 48 48 49}
+    }
+  old_expression_markers {{0 17}
+    }
+  box {0 {border} {width-border} {height}}
+  xjustify right
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 26
+  font {{ Courier 10 Pitch : Regular : Courier10Pitch.pfb : 0 }}
+  global_font_scale {{width*0.00001*parent.fontSize}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  background_opacity 0.7
+  background_border_x 20
+  background_border_y {{parent.border}}
+  name bottom_right
+  xpos 43
+  ypos 9
+ }
+ Output {
+  name Output1
+  xpos 43
+  ypos 44
+ }
+ Viewer {
+  frame_range 1-187
+  name Viewer1
+  xpos 43
+  ypos 68
+ }
+end_group
