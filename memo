@@ -1,0 +1,8 @@
+nuke에서 오른쪽 위쪽 properties 왼쪽 버튼 ->  windows -> scripts editor
+코드치고 ctrl+enter: 실행
+
+노드 색깔:(연산 빠름) 흰->초록->노랑->빨강(연산 느림)
+
+scripts editor에서 코드 친 후 ctrl+A 한 다음에 ctrl+enter시 아래 코드 사라지지 않은 채 실행가능 
+
+
