@@ -1,5 +1,6 @@
 import nuke
 import nukescripts
+import checkenv
 
 tb = nuke.toolbar("Nodes")
 m = tb.addMenu("Mingco", icon="mingco.png")
@@ -13,3 +14,4 @@ mb.addCommand("Slack", "nukescripts.start('https://voiceplayer.slack.com')")
 mb.addCommand("-","","")
 mb.addCommand("StartPerformanceTimers", "nuke.startPerformanceTimers()")
 mb.addCommand("StopPerformanceTimers", "nuke.stopPerformanceTimers()")
+mb.addCommand("CheckENV", "checkenv.main()")
